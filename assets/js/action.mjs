@@ -402,11 +402,11 @@ class MachineApp {
       
       console.log('Regular text:', desoupedText);
       
+      let desoupedThoughts = '';
+      
       if (llmResponseData.reasoning_content) {
-        const desoupedThoughts = llmSoupToText(llmResponseData.reasoning_content)  // No reasoning content
+        desoupedThoughts = llmSoupToText(llmResponseData.reasoning_content)  // No reasoning content
         console.log('Thoughts text:', desoupedThoughts);
-      } else {
-        const desoupedThoughts = '';
       }
       
       const newCmjMessage = {
