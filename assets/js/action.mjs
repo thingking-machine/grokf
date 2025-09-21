@@ -425,9 +425,9 @@ class MachineApp {
       localStorage.setItem('multilogue', updatedPlatoText);
       this.updateDisplayState();
       console.log('Dialogue updated with LLM response.');
-      if (desoupedThoughts && desoupedThoughts.trim() !== '') {
-        localStorage.setItem('thoughts', desoupedThoughts);
-      }
+      
+      localStorage.setItem('thoughts', desoupedThoughts);
+      console.log('Thoughts updated with LLM response.');
       
     } catch (processingError) {
       console.error('Error processing LLM response:', processingError);
